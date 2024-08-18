@@ -7,11 +7,11 @@ class Controller:
     def __init__(self, frequency=1500, speed = 80):
         self.speed = speed
         self.pins = {
-            "ENA": 18,
-            "IN1": 23,
-            "IN2": 24,
+            "ENA": 23,
+            "IN1": 24,
+            "IN2": 25,
             "IN3": 27,
-            "IN4": 17,
+            "IN4": 22,
             "ENB": 4
         }
         GPIO.setmode(GPIO.BCM)
@@ -70,25 +70,24 @@ if __name__ == "__main__":
         while True:
 
             # Full Articulation Demo
-
-            c.head_up()
-            time.sleep(1)
-            c.head_down()
-            time.sleep(1)
-            c.tail_up()
-            time.sleep(1)
-            c.tail_down()
-            time.sleep(1)
-            c.mouth_open()
-            time.sleep(1)
-            c.mouth_close()
-            time.sleep(1)
+            # c.head_up()
+            # time.sleep(1)
+            # c.head_down()
+            # time.sleep(1)
+            # c.tail_up()
+            # time.sleep(1)
+            # c.tail_down()
+            # time.sleep(1)
+            # c.mouth_open()
+            # time.sleep(1)
+            # c.mouth_close()
+            # time.sleep(1)
 
             # talk demo
-            # c.mouth_open()
-            # time.sleep(0.1)
-            # c.mouth_close()
-            # time.sleep(0.1)
+            c.mouth_open()
+            time.sleep(0.1)
+            c.mouth_close()
+            time.sleep(0.1)
 
     except KeyboardInterrupt:   
         del c
